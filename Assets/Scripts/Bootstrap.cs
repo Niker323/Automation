@@ -1,18 +1,23 @@
 using System;
 using UnityEngine;
 
-public class Bootstrap : MonoBehaviour
+namespace Automation
 {
-    public static event Action OnUpdate;
-    public static event Action OnLogicUpdate;
-
-    void Start()
+    public class Bootstrap : MonoBehaviour
     {
-        
-    }
+        public static event Action OnUpdate;
+        public static event Action OnLogicUpdate;
 
-    void Update()
-    {
-        OnUpdate?.Invoke();
+        void Start()
+        {
+            Lang.Init();
+            GetComponent<Blocks>().Init();
+            new Grid().Init();
+        }
+
+        void Update()
+        {
+            OnUpdate?.Invoke();
+        }
     }
 }
