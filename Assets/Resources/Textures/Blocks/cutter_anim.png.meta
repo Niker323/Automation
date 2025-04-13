@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 9b4fd76867efaee449f32230e8bf03cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6137984968643865140
+    second: cutter_anim_0
+  - first:
+      213: 6840172761087783860
+    second: cutter_anim_1
+  - first:
+      213: 5765200815643830450
+    second: cutter_anim_2
+  - first:
+      213: -4321727370964554734
+    second: cutter_anim_3
+  - first:
+      213: 4109764388246239387
+    second: cutter_anim_4
+  - first:
+      213: -6753607641850465881
+    second: cutter_anim_5
+  - first:
+      213: 4040344716872081428
+    second: cutter_anim_6
+  - first:
+      213: 7852616860364685795
+    second: cutter_anim_7
+  - first:
+      213: 4255666860473487403
+    second: cutter_anim_8
+  - first:
+      213: -5259580848214319652
+    second: cutter_anim_9
+  - first:
+      213: -7621112728033997614
+    second: cutter_anim_10
+  - first:
+      213: 7729186902591504794
+    second: cutter_anim_11
+  - first:
+      213: -8218521014177644130
+    second: cutter_anim_12
+  - first:
+      213: 983947472986569246
+    second: cutter_anim_13
+  - first:
+      213: 7242636236472385419
+    second: cutter_anim_14
+  - first:
+      213: 8077708988918448404
+    second: cutter_anim_15
+  - first:
+      213: -7522145990269777039
+    second: cutter_anim_16
+  - first:
+      213: -5516127929266656534
+    second: cutter_anim_17
+  - first:
+      213: -8460903186990427839
+    second: cutter_anim_18
+  - first:
+      213: -1973589815882335222
+    second: cutter_anim_19
+  - first:
+      213: 8360196411675030561
+    second: cutter_anim_20
+  - first:
+      213: -2235283835966507382
+    second: cutter_anim_21
+  - first:
+      213: -6866442000860970394
+    second: cutter_anim_22
+  - first:
+      213: 759104548017742579
+    second: cutter_anim_23
+  - first:
+      213: -7349043376934777706
+    second: cutter_anim_24
+  - first:
+      213: -7769038549495378818
+    second: cutter_anim_25
+  - first:
+      213: -1915534575013509612
+    second: cutter_anim_26
+  - first:
+      213: -2942122327723959867
+    second: cutter_anim_27
+  - first:
+      213: 8218615988137930823
+    second: cutter_anim_28
+  - first:
+      213: 3782441672828950980
+    second: cutter_anim_29
+  - first:
+      213: 4474145347541378750
+    second: cutter_anim_30
+  - first:
+      213: 2742137032920064096
+    second: cutter_anim_31
+  - first:
+      213: 2208091895804402930
+    second: cutter_anim_32
+  - first:
+      213: 8344765352040842571
+    second: cutter_anim_33
+  - first:
+      213: 3159900684211480285
+    second: cutter_anim_34
+  - first:
+      213: -5196896894449183104
+    second: cutter_anim_35
+  - first:
+      213: -4302692595698959031
+    second: cutter_anim_36
+  - first:
+      213: -3757509909199431031
+    second: cutter_anim_37
+  - first:
+      213: -5467754917286645440
+    second: cutter_anim_38
+  - first:
+      213: 8214353105886149633
+    second: cutter_anim_39
+  - first:
+      213: -4669948998255181634
+    second: cutter_anim_40
+  - first:
+      213: 225043599086120573
+    second: cutter_anim_41
+  - first:
+      213: 3081859857989582911
+    second: cutter_anim_42
+  - first:
+      213: 5694468251198401212
+    second: cutter_anim_43
+  - first:
+      213: -2571789469740231087
+    second: cutter_anim_44
+  - first:
+      213: -2064692145354274887
+    second: cutter_anim_45
+  - first:
+      213: -5885984508251719365
+    second: cutter_anim_46
+  - first:
+      213: -685675287552301595
+    second: cutter_anim_47
+  - first:
+      213: 1346750198397414391
+    second: cutter_anim_48
+  - first:
+      213: 4927870466701901188
+    second: cutter_anim_49
+  - first:
+      213: -7390543363024091331
+    second: cutter_anim_50
+  - first:
+      213: 3724742554524824747
+    second: cutter_anim_51
+  - first:
+      213: -6451952052584989446
+    second: cutter_anim_52
+  - first:
+      213: 9001998184152929267
+    second: cutter_anim_53
+  - first:
+      213: 1365186546439735192
+    second: cutter_anim_54
+  - first:
+      213: -2500905182373133672
+    second: cutter_anim_55
+  - first:
+      213: -6166700442096878171
+    second: cutter_anim_56
+  - first:
+      213: 5603238543003535113
+    second: cutter_anim_57
+  - first:
+      213: -8721183252428177734
+    second: cutter_anim_58
+  - first:
+      213: -2487691944589218830
+    second: cutter_anim_59
+  - first:
+      213: 99650623637018720
+    second: cutter_anim_60
+  - first:
+      213: 8719823670116112187
+    second: cutter_anim_61
+  - first:
+      213: 1698921081654077445
+    second: cutter_anim_62
+  - first:
+      213: -2383356358482041556
+    second: cutter_anim_63
+  - first:
+      213: -9042134236618368020
+    second: cutter_anim_64
+  - first:
+      213: 4070367074164006734
+    second: cutter_anim_65
+  - first:
+      213: -5087509806531375790
+    second: cutter_anim_66
+  - first:
+      213: -2365016457859558936
+    second: cutter_anim_67
+  - first:
+      213: 5690361074724825673
+    second: cutter_anim_68
+  - first:
+      213: -3985904061881533407
+    second: cutter_anim_69
+  - first:
+      213: 621794461925072218
+    second: cutter_anim_70
+  - first:
+      213: 2137756257008781623
+    second: cutter_anim_71
+  - first:
+      213: 8434278718243442566
+    second: cutter_anim_72
+  - first:
+      213: 7252348105368648093
+    second: cutter_anim_73
+  - first:
+      213: 7959386317180951728
+    second: cutter_anim_74
+  - first:
+      213: -2140823940305009679
+    second: cutter_anim_75
+  - first:
+      213: -8284980503459761158
+    second: cutter_anim_76
+  - first:
+      213: 7135748630529290957
+    second: cutter_anim_77
+  - first:
+      213: -8415036996116593132
+    second: cutter_anim_78
+  - first:
+      213: 3689788351368317425
+    second: cutter_anim_79
+  - first:
+      213: 3268945569994498641
+    second: cutter_anim_80
+  - first:
+      213: 5764007045264164789
+    second: cutter_anim_81
+  - first:
+      213: -1795167693350416640
+    second: cutter_anim_82
+  - first:
+      213: 2007403727052342696
+    second: cutter_anim_83
+  - first:
+      213: 1990060961898026799
+    second: cutter_anim_84
+  - first:
+      213: 8795417069292173628
+    second: cutter_anim_85
+  - first:
+      213: 6231543675960980054
+    second: cutter_anim_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cutter_anim_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a64bcfec08e2550800000000000000
+      internalID: 6137984968643865140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3b0faa2ec2dee50800000000000000
+      internalID: 6840172761087783860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b82e33b89b120050800000000000000
+      internalID: 5765200815643830450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c23958ad32604c0800000000000000
+      internalID: -4321727370964554734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98b7f7cfe0d80930800000000000000
+      internalID: 4109764388246239387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1b323c1ad5642a0800000000000000
+      internalID: -6753607641850465881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41069430d10321830800000000000000
+      internalID: 4040344716872081428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1c747fd691afc60800000000000000
+      internalID: 7852616860364685795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b209cec467a2f0b30800000000000000
+      internalID: 4255666860473487403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdddcb2c5173207b0800000000000000
+      internalID: -5259580848214319652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_10
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc435c2a5e5c3690800000000000000
+      internalID: -7621112728033997614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_11
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9181937986934b60800000000000000
+      internalID: 7729186902591504794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_12
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91cbd26ea2f1fd80800000000000000
+      internalID: -8218521014177644130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_13
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1af105730fa7ad00800000000000000
+      internalID: 983947472986569246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_14
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ffe40b843038460800000000000000
+      internalID: 7242636236472385419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411c6732789c91070800000000000000
+      internalID: 8077708988918448404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_16
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b475d6318fb9790800000000000000
+      internalID: -7522145990269777039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_17
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea2370cfd6c273b0800000000000000
+      internalID: -5516127929266656534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_18
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14117741165d49a80800000000000000
+      internalID: -8460903186990427839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_19
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c310cd4866c94e0800000000000000
+      internalID: -1973589815882335222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_20
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124b26a9752650470800000000000000
+      internalID: 8360196411675030561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_21
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a863b09b13daaf0e0800000000000000
+      internalID: -2235283835966507382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_22
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6620cd3516f75b0a0800000000000000
+      internalID: -6866442000860970394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_23
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f22bf38091e88a00800000000000000
+      internalID: 759104548017742579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_24
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c8dde4cf3f20a90800000000000000
+      internalID: -7349043376934777706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_25
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c0303f994de2490800000000000000
+      internalID: -7769038549495378818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_26
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4164755f377aa65e0800000000000000
+      internalID: -1915534575013509612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_27
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9944ab45b7b27d0800000000000000
+      internalID: -2942122327723959867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_28
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740be4672b36e0270800000000000000
+      internalID: 8218615988137930823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_29
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c99a9449aeed7430800000000000000
+      internalID: 3782441672828950980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_30
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6aba11d7b571e30800000000000000
+      internalID: 4474145347541378750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_31
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060e4ac5a170e0620800000000000000
+      internalID: 2742137032920064096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_32
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc17d851e7b4ae10800000000000000
+      internalID: 2208091895804402930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_33
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45c16e00ef8ec370800000000000000
+      internalID: 8344765352040842571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_34
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd660ff2ee83adb20800000000000000
+      internalID: 3159900684211480285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_35
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08696001fc9e0e7b0800000000000000
+      internalID: -5196896894449183104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_36
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94df8af71e3c944c0800000000000000
+      internalID: -4302692595698959031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_37
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a582e45a4aadbc0800000000000000
+      internalID: -3757509909199431031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_38
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041fb344fd1ae14b0800000000000000
+      internalID: -5467754917286645440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_39
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c78f7d0ae3ff170800000000000000
+      internalID: 8214353105886149633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_40
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb00fc7e022013fb0800000000000000
+      internalID: -4669948998255181634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_41
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ee08606f38f1300800000000000000
+      internalID: 225043599086120573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_42
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3041036637f4ca20800000000000000
+      internalID: 3081859857989582911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_43
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaab6134b0d60f40800000000000000
+      internalID: 5694468251198401212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_44
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1561b0b6a1b2f4cd0800000000000000
+      internalID: -2571789469740231087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_45
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b78e99de6db853e0800000000000000
+      internalID: -2064692145354274887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_46
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3934386648c05ea0800000000000000
+      internalID: -5885984508251719365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_47
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e56e2675fdfb76f0800000000000000
+      internalID: -685675287552301595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_48
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb2aa88b2e90b210800000000000000
+      internalID: 1346750198397414391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_49
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48db7ea9410536440800000000000000
+      internalID: 4927870466701901188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_50
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3704d5d7f38f6990800000000000000
+      internalID: -7390543363024091331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_51
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4bb3a6e91f0b330800000000000000
+      internalID: 3724742554524824747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_52
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcb1d5cacf0676a0800000000000000
+      internalID: -6451952052584989446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_53
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3952367a58dec70800000000000000
+      internalID: 9001998184152929267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_54
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897cea05eed12f210800000000000000
+      internalID: 1365186546439735192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_55
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89247bbacfffa4dd0800000000000000
+      internalID: -2500905182373133672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_56
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad3298de9a7b6aa0800000000000000
+      internalID: -6166700442096878171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_57
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907c08384c3b2cd40800000000000000
+      internalID: 5603238543003535113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_58
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abebee9e90228f680800000000000000
+      internalID: -8721183252428177734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_59
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fba8245b51f97dd0800000000000000
+      internalID: -2487691944589218830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_60
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068d787d6b7026100800000000000000
+      internalID: 99650623637018720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_61
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b375059ad69030970800000000000000
+      internalID: 8719823670116112187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_62
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508e965f8b7c39710800000000000000
+      internalID: 1698921081654077445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_63
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25628ff40e9ceed0800000000000000
+      internalID: -2383356358482041556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_64
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebd6fea1d2e38280800000000000000
+      internalID: -9042134236618368020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_65
+      rect:
+        serializedVersion: 2
+        x: 2211
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fddf8c949dc7830800000000000000
+      internalID: 4070367074164006734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_66
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d816629c88569b0800000000000000
+      internalID: -5087509806531375790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_67
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1145ddf06cd2fd0800000000000000
+      internalID: -2365016457859558936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_68
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94aeea6af3938fe40800000000000000
+      internalID: 5690361074724825673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_69
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12cb3cabf593fa8c0800000000000000
+      internalID: -3985904061881533407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_70
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d595ac4ce01a800800000000000000
+      internalID: 621794461925072218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_71
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739806b4df5daad10800000000000000
+      internalID: 2137756257008781623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_72
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f8989bec39c0570800000000000000
+      internalID: 8434278718243442566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_73
+      rect:
+        serializedVersion: 2
+        x: 2483
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99b9ff5d2485a460800000000000000
+      internalID: 7252348105368648093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_74
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bcdca15fab657e60800000000000000
+      internalID: 7959386317180951728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_75
+      rect:
+        serializedVersion: 2
+        x: 2551
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3c77708f34a42e0800000000000000
+      internalID: -2140823940305009679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_76
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af37e38b026d50d80800000000000000
+      internalID: -8284980503459761158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_77
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2bd299295470360800000000000000
+      internalID: 7135748630529290957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_78
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41643b2df68c73b80800000000000000
+      internalID: -8415036996116593132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_79
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9ceabc4f2c43330800000000000000
+      internalID: 3689788351368317425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_80
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152eb912da0ad5d20800000000000000
+      internalID: 3268945569994498641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_81
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7c1df5eddddff40800000000000000
+      internalID: 5764007045264164789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_82
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f479d7e784617e0800000000000000
+      internalID: -1795167693350416640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_83
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a500c7dd0bbbdb10800000000000000
+      internalID: 2007403727052342696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_84
+      rect:
+        serializedVersion: 2
+        x: 2857
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27dd4ba6ed1e9b10800000000000000
+      internalID: 1990060961898026799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_85
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39319279399f0a70800000000000000
+      internalID: 8795417069292173628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutter_anim_86
+      rect:
+        serializedVersion: 2
+        x: 2925
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6527cf705f3ea7650800000000000000
+      internalID: 6231543675960980054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

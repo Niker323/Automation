@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d1d8273f2a34d4e82abeb2bb1fcea7, type: 3}
   m_Name: Conv
   m_EditorClassIdentifier: 
-  id: 0
-  gameObject: {fileID: 6700857608098209219, guid: d4775c7d1f6466c42bba01688bb549a5, type: 3}
+  downTexture: {fileID: 2800000, guid: 33a7a24203923104495c52148d7c58a1, type: 3}
+  downFrames: 32
+  downFPS: 16
+  upTexture: {fileID: 0}
+  upFrames: 1
+  upFPS: 0

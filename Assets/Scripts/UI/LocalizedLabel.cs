@@ -8,28 +8,10 @@ using UnityEngine.UIElements;
 
 namespace Automation.UI
 {
-    public class LocalizedLabel : Label
+    [UxmlElement]
+    public partial class LocalizedLabel : Label
     {
-        [UnityEngine.Scripting.Preserve]
-        public new class UxmlFactory : UxmlFactory<LocalizedLabel, UxmlTraits> { }
-
-        [UnityEngine.Scripting.Preserve]
-        public new class UxmlTraits : Label.UxmlTraits
-        {
-            private UxmlStringAttributeDescription m_Key = new UxmlStringAttributeDescription
-            {
-                name = "localization-key"
-            };
-            public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription { get { yield break; } }
-
-            public override void Init(VisualElement visualElement, IUxmlAttributes attributes, CreationContext creationContext)
-            {
-                base.Init(visualElement, attributes, creationContext);
-                LocalizedLabel textElement = (LocalizedLabel)visualElement;
-                textElement.localizationKey = m_Key.GetValueFromBag(attributes, creationContext);
-            }
-        }
-
+        [UxmlAttribute("localization-key")]
         public string localizationKey { get; set; }
 
         public LocalizedLabel()
