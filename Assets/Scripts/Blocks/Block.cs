@@ -11,17 +11,19 @@ namespace Automation
         public Texture2D icon;
         public Texture2D downTexture;
         public int downFrames = 1;
-        public int downFPS = 0;
+        public int downFPS = 1;
         [NonSerialized]
         public Rect downRect;
         [NonSerialized]
         public float downAnimData;
         public Texture2D upTexture;
         public int upFrames = 1;
-        public int upFPS = 0;
+        public int upFPS = 1;
         [NonSerialized]
         public Rect upRect;
         [NonSerialized]
         public float upAnimData;
+        public string blockEntity = "BlockEntity";
+        public Type blockEntityType;
     }
 }

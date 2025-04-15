@@ -5,21 +5,23 @@ namespace Automation
 {
     public class Bootstrap : MonoBehaviour
     {
+        const double tickTime = 0.1f;
         public static Bootstrap instance;
         public static event Action OnUpdate;
         public static event Action OnLogicUpdate;
+        public static event Action OnLateUpdate;
         public GameObject field;
         public Material gridMaterial;
+        public Grid grid = new Grid();
         double time;
-        const double tickTime = 0.1f;
-        Grid grid = new Grid();
 
         void Start()
         {
             instance = this;
             Lang.Init();
             GetComponent<Blocks>().Init();
-            grid.Init();
+            grid.Init("Grid1");
+            grid.DrawGrid();
         }
 
         void Update()
@@ -31,6 +33,11 @@ namespace Automation
                 OnLogicUpdate?.Invoke();
             }
             OnUpdate?.Invoke();
+        }
+
+        void LateUpdate()
+        {
+            OnLateUpdate?.Invoke();
         }
     }
 }

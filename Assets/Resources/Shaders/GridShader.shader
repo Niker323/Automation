@@ -41,9 +41,9 @@ Shader "Custom/Grid"
 
             struct Attributes
             {
-                float4 positionOS   : POSITION;
+                float3 positionOS   : POSITION;
                 float4 color        : COLOR;
-                float2 uv           : TEXCOORD0;
+                float3 uv           : TEXCOORD0;
                 UNITY_SKINNED_VERTEX_INPUTS
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
@@ -84,13 +84,13 @@ Shader "Custom/Grid"
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 UNITY_SKINNED_VERTEX_COMPUTE(v);
 
-                BlockAnim(v.uv, v.positionOS.w);
                 v.positionOS.xyz = UnityFlipSprite(v.positionOS.xyz, unity_SpriteProps.xy);
                 o.positionCS = TransformObjectToHClip(v.positionOS.xyz);
                 #if defined(DEBUG_DISPLAY)
                 o.positionWS = TransformObjectToWorld(v.positionOS.xyz);
                 #endif
-                o.uv = v.uv;
+                o.uv = v.uv.xy;
+                BlockAnim(o.uv, v.uv.z);
                 o.color = v.color * _Color * unity_SpriteColor;
                 return o;
             }

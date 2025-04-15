@@ -25,6 +25,7 @@ namespace Automation
                 block.upAnimData = BitConverter.Int32BitsToSingle(block.upFrames | (block.upFPS << 8));
                 arrayOfTextures.Add(block.downTexture);
                 arrayOfTextures.Add(block.upTexture);
+                block.blockEntityType = Type.GetType("Automation.BlockEntities." + block.blockEntity);
             }
 
             blockAtlas = new Texture2D(1, 1);
