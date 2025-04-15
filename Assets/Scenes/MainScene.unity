@@ -288,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   field: {fileID: 1945976893}
   gridMaterial: {fileID: 2100000, guid: bc135d2f6b03e0d42a9fb7bab9c77e8d, type: 2}
+  money: 0
 --- !u!4 &1741674813
 Transform:
   m_ObjectHideFlags: 0
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _blocks:
   - {fileID: 11400000, guid: 8a89f1b7dc499e04f842ce5714a28fb1, type: 2}
+  - {fileID: 11400000, guid: 7da00e215456b1447951abcdae085f04, type: 2}
   - {fileID: 11400000, guid: 5133235c08bb1b547a27fd1b68f2fb22, type: 2}
 --- !u!1 &1904936647
 GameObject:

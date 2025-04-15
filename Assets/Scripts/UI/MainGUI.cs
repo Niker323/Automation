@@ -1,5 +1,7 @@
 using Automation.BlockEntities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -12,6 +14,7 @@ namespace Automation
         public ToolMode toolMode;
         Button buildB, breakB, rotationB, cancelB, buildSelectB;
         VisualElement root;
+        VisualElement midPanel;
         Vector3 downPos;
         Camera mainCamera;
         private bool md;
@@ -36,10 +39,36 @@ namespace Automation
             cancelB.clicked += () => { SetToolMode(ToolMode.None); };
             cancelB.enabledSelf = false;
             buildSelectB = root.Q<Button>("buildSelect");
+            buildSelectB.clicked += () =>
+            {
+                root.Q<ListView>("blockList").itemsSource = Blocks.blocks.Select((block) => block.code).ToList();
+                OpenMidPanel(root.Q("selectBuild"));
+            };
+            root.Q<ListView>("blockList").itemsChosen += (obj) =>
+            {
+                //IEnumerator<object> enumerator = obj.GetEnumerator();
+                //enumerator.MoveNext();
+                //string schm = enumerator.Current.ToString();
+            };
+            root.Q<Button>("closeMid").clicked += CloseMidPanel;
             mainCamera = Camera.main;
             screencoof = (Screen.height / 1000f) * 12;
             //For PC
             Bootstrap.OnUpdate += OnUpdate;
+        }
+
+        public void CloseMidPanel()
+        {
+            midPanel.style.display = DisplayStyle.None;
+            midPanel = null;
+        }
+
+        void OpenMidPanel(VisualElement panel)
+        {
+            if (midPanel != null)
+                midPanel.style.display = DisplayStyle.None;
+            midPanel = panel;
+            midPanel.style.display = DisplayStyle.Flex;
         }
 
         public void SetToolMode(ToolMode toolMode)

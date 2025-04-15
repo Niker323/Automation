@@ -12,12 +12,15 @@ namespace Automation
         public static event Action OnLateUpdate;
         public GameObject field;
         public Material gridMaterial;
+        public long money;
         public Grid grid = new Grid();
         double time;
 
         void Start()
         {
             instance = this;
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = -1;
             Lang.Init();
             GetComponent<Blocks>().Init();
             grid.Init("Grid1");

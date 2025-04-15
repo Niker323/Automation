@@ -11,9 +11,12 @@ namespace Automation
         public static Block[] blocks;
         public static Texture2D blockAtlas;
         public Block[] _blocks;
+        bool inited = false;
 
         public void Init()
         {
+            if (inited) return;
+            inited = true;
             blocks = _blocks;
 
             HashSet<Texture2D> arrayOfTextures = new HashSet<Texture2D>();

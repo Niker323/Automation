@@ -12,14 +12,14 @@ namespace Automation
     {
         public const int size = 20;
         public const float cellSize = 0.32f;
-        const int verts = size * size * 4;
+        const int verts = size * size * 8;
         public string name;
         BlockEntity[,] blocks = new BlockEntity[size, size];
         GameObject gridGO;
         Mesh gridMesh;
         Vector3[] uvs;
         HashSet<Vector2Int> toredraw = new HashSet<Vector2Int>();
-        static Vector3[] forblockuvs = new Vector3[4];
+        static Vector3[] forblockuvs = new Vector3[8];
         bool visual = false;
 
         public void Init(string gridName)
@@ -92,17 +92,27 @@ namespace Automation
 
                     float xPos = x * cellSize;
                     float yPos = y * cellSize;
-                    int ind = (x + y * size) * 4;
-                    vertices[ind] = new Vector3(xPos, yPos, 0);
-                    vertices[ind + 1] = new Vector3(xPos + cellSize, yPos, 0);
-                    vertices[ind + 2] = new Vector3(xPos + cellSize, yPos + cellSize, 0);
-                    vertices[ind + 3] = new Vector3(xPos, yPos + cellSize, 0);
+                    int ind1 = (x + y * size) * 4;
+                    int ind2 = ind1 + verts / 2;
+                    vertices[ind1] = new Vector3(xPos, yPos, 0);
+                    vertices[ind1 + 1] = new Vector3(xPos + cellSize, yPos, 0);
+                    vertices[ind1 + 2] = new Vector3(xPos + cellSize, yPos + cellSize, 0);
+                    vertices[ind1 + 3] = new Vector3(xPos, yPos + cellSize, 0);
+                    vertices[ind2] = new Vector3(xPos, yPos, -5);
+                    vertices[ind2 + 1] = new Vector3(xPos + cellSize, yPos, -5);
+                    vertices[ind2 + 2] = new Vector3(xPos + cellSize, yPos + cellSize, -5);
+                    vertices[ind2 + 3] = new Vector3(xPos, yPos + cellSize, -5);
 
                     be.GetBlockUVs(forblockuvs);
-                    uvs[ind] = forblockuvs[0];
-                    uvs[ind + 1] = forblockuvs[1];
-                    uvs[ind + 2] = forblockuvs[2];
-                    uvs[ind + 3] = forblockuvs[3];
+                    uvs[ind1] = forblockuvs[0];
+                    uvs[ind1 + 1] = forblockuvs[1];
+                    uvs[ind1 + 2] = forblockuvs[2];
+                    uvs[ind1 + 3] = forblockuvs[3];
+
+                    uvs[ind2] = forblockuvs[4];
+                    uvs[ind2 + 1] = forblockuvs[5];
+                    uvs[ind2 + 2] = forblockuvs[6];
+                    uvs[ind2 + 3] = forblockuvs[7];
                 }
             }
             gridMesh.vertices = vertices;
@@ -126,11 +136,17 @@ namespace Automation
                 {
                     BlockEntity be = blocks[pos.x, pos.y];
                     be.GetBlockUVs(forblockuvs);
-                    int ind = (pos.x + pos.y * size) * 4;
-                    uvs[ind] = forblockuvs[0];
-                    uvs[ind + 1] = forblockuvs[1];
-                    uvs[ind + 2] = forblockuvs[2];
-                    uvs[ind + 3] = forblockuvs[3];
+                    int ind1 = (pos.x + pos.y * size) * 4;
+                    int ind2 = ind1 + verts / 2;
+                    uvs[ind1] = forblockuvs[0];
+                    uvs[ind1 + 1] = forblockuvs[1];
+                    uvs[ind1 + 2] = forblockuvs[2];
+                    uvs[ind1 + 3] = forblockuvs[3];
+
+                    uvs[ind2] = forblockuvs[4];
+                    uvs[ind2 + 1] = forblockuvs[5];
+                    uvs[ind2 + 2] = forblockuvs[6];
+                    uvs[ind2 + 3] = forblockuvs[7];
                 }
                 gridMesh.SetUVs(0, uvs);
             }

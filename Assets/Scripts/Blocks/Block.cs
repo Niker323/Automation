@@ -8,7 +8,10 @@ namespace Automation
     {
         [NonSerialized]
         public int id;
+        public string code;
         public Texture2D icon;
+        public bool canBuild = true;
+        public long price;
         public Texture2D downTexture;
         public int downFrames = 1;
         public int downFPS = 1;

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90dc14a04fd739f4382c88a7df1d8e79, type: 3}
-  m_Name: Conveyor
+  m_Name: Market
   m_EditorClassIdentifier: 
-  code: conveyor
-  icon: {fileID: 2800000, guid: 765d9260d956a2b4288fd66256b5672d, type: 3}
+  code: market
+  icon: {fileID: 2800000, guid: 250f841beb750ff45859b11688afd7e3, type: 3}
   canBuild: 1
-  price: 1
+  price: 10
   downTexture: {fileID: 2800000, guid: 33a7a24203923104495c52148d7c58a1, type: 3}
   downFrames: 32
   downFPS: 32
-  upTexture: {fileID: 2800000, guid: 862836daa0c01694da70221bddfa09cb, type: 3}
+  upTexture: {fileID: 2800000, guid: 7ae02aca2f772314c8a84fca06528068, type: 3}
   upFrames: 1
   upFPS: 1
-  blockEntity: SidedBlockEntity
+  blockEntity: BlockEntity

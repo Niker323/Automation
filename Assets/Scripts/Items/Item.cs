@@ -7,6 +7,7 @@ namespace Automation
     public class Item : ScriptableObject
     {
         public int id;
+        public string code;
         public Texture icon;
     }
 }
