@@ -13,7 +13,7 @@ namespace Automation.BlockEntities
             new Vector2(0.16f, 0.23f),
             new Vector2(0.23f, 0.16f)
         };
-        string itemSaveKey, timeSaveKey;
+        string itemSaveKey;
         Item buyItem;
         SpriteRenderer itemIcon;
         int timer;
@@ -22,10 +22,8 @@ namespace Automation.BlockEntities
         {
             base.OnLoaded();
             itemSaveKey = $"_{grid.name}_{pos.x}_{pos.y}_item";
-            timeSaveKey = $"_{grid.name}_{pos.x}_{pos.y}_time";
             int itemid = PlayerPrefs.GetInt(itemSaveKey, -1);
             if (itemid != -1) buyItem = Items.items[itemid];
-            timer = PlayerPrefs.GetInt(timeSaveKey);
             Bootstrap.OnLogicUpdate += OnLogicUpdate;
         }
 
@@ -78,7 +76,6 @@ namespace Automation.BlockEntities
             {
                 timer = 0;
             }
-            PlayerPrefs.SetInt(timeSaveKey, timer);
         }
 
         public override void OnUse()
@@ -129,7 +126,6 @@ namespace Automation.BlockEntities
         public override void OnRemoved()
         {
             PlayerPrefs.DeleteKey(itemSaveKey);
-            PlayerPrefs.DeleteKey(timeSaveKey);
             if (itemIcon != null) Items.PoolSprite(itemIcon.gameObject);
             base.OnRemoved();
         }

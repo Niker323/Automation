@@ -16,3 +16,4 @@ MonoBehaviour:
   code: copper
   icon: {fileID: 21300000, guid: 0c62d0a08f0725748ace25dcbba87d2f, type: 3}
   inMarket: 1
+  price: 1

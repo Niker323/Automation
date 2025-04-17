@@ -10,5 +10,6 @@ namespace Automation
         public string code;
         public Sprite icon;
         public bool inMarket = false;
+        public long price;
     }
 }

@@ -21,6 +21,7 @@ namespace Automation.BlockEntities
             for (int i = moveItems.Count - 1; i >= 0; i--)
             {
                 ItemEntity ie = moveItems[i];
+                if (ie.lastLogicTime == Bootstrap.time) continue;
                 ie.lastLogicTime = Bootstrap.time;
                 ie.pos++;
                 if (ie.pos == 5)
@@ -49,7 +50,7 @@ namespace Automation.BlockEntities
             else
             {
                 //Drop item
-                GameObject.Destroy(item.sprite.gameObject);
+                if (item.sprite != null) Items.PoolSprite(item.sprite.gameObject);
             }
         }
 
@@ -76,11 +77,11 @@ namespace Automation.BlockEntities
                     Vector2 locpos = ie.randomOffset;
                     if (ie.pos > 4)
                     {
-                        locpos += ie.to.Normal * Grid.cellSize * (ie.pos - 5) / 10;// + ((Bootstrap.time - ie.lastLogicTime) * ie.to.Normal * Grid.cellSize);
+                        locpos += ((ie.pos - 5) / 10f + (Bootstrap.time - ie.lastLogicTime)) * Grid.cellSize * ie.to.Normal;
                     }
                     else
                     {
-                        locpos += ie.from.Normal * Grid.cellSize * (5 - ie.pos) / 10;
+                        locpos += ((5 - ie.pos) / 10f - (Bootstrap.time - ie.lastLogicTime)) * Grid.cellSize * ie.from.Normal;
                     }
                     if (ie.sprite == null)
                     {
@@ -100,6 +101,13 @@ namespace Automation.BlockEntities
 
         public override void OnRemoved()
         {
+            foreach (ItemEntity itemEntity in moveItems)
+            {
+                if (itemEntity.sprite != null)
+                {
+                    Items.PoolSprite(itemEntity.sprite.gameObject);
+                }
+            }
             Bootstrap.OnUpdate -= OnUpdate;
             Bootstrap.OnLogicUpdate -= OnLogicUpdate;
             base.OnRemoved();

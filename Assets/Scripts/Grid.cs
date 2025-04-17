@@ -10,20 +10,23 @@ namespace Automation
 {
     public class Grid
     {
-        public const int size = 20;
         public const float cellSize = 0.32f;
-        const int verts = size * size * 4;
-        public string name;
-        public GameObject gridGO;
-        public bool visual = false;
-        BlockEntity[,] blocks = new BlockEntity[size, size];
+        public int size { get; private set; }
+        public string name { get; private set; }
+        public GameObject gridGO { get; private set; }
+        public bool visual { get; private set; }
+        int verts;
+        BlockEntity[,] blocks;
         Mesh downGridMesh, upGridMesh;
         Vector3[] downUVs, upUVs;
         HashSet<Vector2Int> toredraw = new HashSet<Vector2Int>();
         static Vector3[] forblockuvs = new Vector3[8];
 
-        public void Init(string gridName)
+        public void Init(string gridName, int size)
         {
+            this.size = size;
+            verts = size * size * 4;
+            blocks = new BlockEntity[size, size];
             LoadGrid(gridName);
         }
 
@@ -42,7 +45,7 @@ namespace Automation
 
         public BlockEntity GetBlockEntity(Vector2Int pos)
         {
-            if (pos.x > 0 && pos.x < size && pos.y > 0 && pos.y < size)
+            if (pos.x >= 0 && pos.x < size && pos.y >= 0 && pos.y < size)
                 return blocks[pos.x, pos.y];
             else 
                 return null;
@@ -50,7 +53,7 @@ namespace Automation
 
         public BlockEntity GetBlockEntity(Vector3 pos)
         {
-            const float halfField = cellSize * (size / 2);
+            float halfField = cellSize * (size / 2);
             if (pos.x > -halfField && pos.x < halfField)
             {
                 if (pos.y > -halfField && pos.y < halfField)
@@ -145,7 +148,8 @@ namespace Automation
             downGridMesh.SetIndices(indices, MeshTopology.Quads, 0);
             downGridMesh.SetUVs(0, downUVs);
             downGridMesh.RecalculateBounds();
-            gridGO.transform.position = new Vector3(0, 0, -1) - downGridMesh.bounds.center;
+            gridGO.transform.localPosition = new Vector3(0, 0, -1) - downGridMesh.bounds.center;
+            gridGO.transform.localScale = Vector3.one;
             gridGO.AddComponent<MeshFilter>().mesh = downGridMesh;
             gridGO.AddComponent<MeshRenderer>().material = Bootstrap.instance.gridMaterial;
 
@@ -157,7 +161,8 @@ namespace Automation
             upGridMesh.SetIndices(indices, MeshTopology.Quads, 0);
             upGridMesh.SetUVs(0, upUVs);
             upGridMesh.RecalculateBounds();
-            upgridGO.transform.position = new Vector3(0, 0, -6) - upGridMesh.bounds.center;
+            upgridGO.transform.localPosition = new Vector3(0, 0, -5);
+            upgridGO.transform.localScale = Vector3.one;
             upgridGO.AddComponent<MeshFilter>().mesh = upGridMesh;
             upgridGO.AddComponent<MeshRenderer>().material = Bootstrap.instance.gridMaterial;
             Bootstrap.OnLateUpdate += OnLateUpdate;
@@ -192,6 +197,7 @@ namespace Automation
             GameObject.Destroy(gridGO);
             GameObject.Destroy(upGridMesh);
             GameObject.Destroy(downGridMesh);
+            Items.ClearPool();
             downUVs = null;
             upUVs = null;
             Bootstrap.OnLateUpdate -= OnLateUpdate;

@@ -11,9 +11,9 @@ namespace Automation
         public static event Action OnLogicUpdate;
         public static event Action OnLateUpdate;
         public static float time;
+        public static long money { get; private set; }
         public GameObject field;
         public Material gridMaterial;
-        public long money { get; private set; }
         public Grid grid = new Grid();
         public Items items;
         public Blocks blocks;
@@ -30,15 +30,17 @@ namespace Automation
             blocks.Init();
             money = long.Parse(PlayerPrefs.GetString("moneyValue", "0"));
             TechTree.Init();
-            grid.Init("Grid1");
+            grid.Init("Grid1", 20);
             grid.DrawGrid();
             mainGUI.Init();
         }
 
-        public void ChangeMoney(int change)
+        public static void ChangeMoney(long change)
         {
             money += change;
         }
+
+        public static void ChangeMoney(int change) => ChangeMoney(change);
 
         void Update()
         {

@@ -21,6 +21,7 @@ namespace Automation
         private float dist;
         private float screencoof;
         private Block buildBlock;
+        const float camBorderCoof = 5;
 
         public void Init()
         {
@@ -99,7 +100,8 @@ namespace Automation
             itemsL.bindItem = (e, i) =>
             {
                 var items = (Label)e.userData;
-                items.text = Items.items[i].code;
+                Item mitem = Items.marketItems[i];
+                items.text = mitem == null ? "Empty" : mitem.code;
             };
             itemsL.itemsSource = Items.marketItems;
             itemsL.itemsChosen += (obj) =>
@@ -112,10 +114,12 @@ namespace Automation
 
             root.Query<Button>("closeMid").ForEach((btn) => { btn.clicked += CloseMidPanel; });
             mainCamera = Camera.main;
-            screencoof = (Screen.height / 1000f) * 12;
+            screencoof = (Screen.height / 1000f) * 10;
             SetBuildBlock(Blocks.blocks[1]);
             //For PC
             Bootstrap.OnUpdate += OnUpdate;
+            root.Q<Button>("hide").clicked += () => { Bootstrap.instance.grid.UndrawGrid(); };
+            root.Q<Button>("show").clicked += () => { Bootstrap.instance.grid.DrawGrid(); };
         }
 
         private void UpdateSafeArea(GeometryChangedEvent evt)
@@ -244,7 +248,7 @@ namespace Automation
                         Vector3 nowpos = mainCamera.transform.position;
                         float newx = nowpos.x - Input.GetAxis("Mouse X") / screencoof;
                         float newy = nowpos.y - Input.GetAxis("Mouse Y") / screencoof;
-                        float sizemult = 3.8f * (Bootstrap.instance.field.transform.localScale.x - 0.5f);
+                        float sizemult = camBorderCoof * (Bootstrap.instance.field.transform.localScale.x - 0.5f);
                         if (newx > sizemult) newx = sizemult;
                         else if (newx < -sizemult) newx = -sizemult;
                         if (newy > sizemult) newy = sizemult;
@@ -270,6 +274,7 @@ namespace Automation
             {
                 ChangeSize(scroll / 18);
             }
+            fps.text = (1.0f / Time.deltaTime).ToString();
         }
 
         void ChangeSize(float change)
@@ -277,13 +282,13 @@ namespace Automation
             float oldscale = Bootstrap.instance.field.transform.localScale.x;
             float newscale = oldscale + change / (Screen.height / 1500f);
             if (newscale > 8) newscale = 8;
-            else if (newscale < 1) newscale = 1;
+            else if (newscale < 0.6f) newscale = 0.6f;
             float mult = newscale / oldscale;
             Bootstrap.instance.field.transform.localScale = new Vector3(newscale, newscale, 1);
             Vector3 nowpos = mainCamera.transform.position;
             float newx = nowpos.x * mult;
             float newy = nowpos.y * mult;
-            float sizemult = 3.8f * (newscale - 0.5f);
+            float sizemult = camBorderCoof * (newscale - 0.5f);
             if (newx > sizemult) newx = sizemult;
             else if (newx < -sizemult) newx = -sizemult;
             if (newy > sizemult) newy = sizemult;
@@ -328,11 +333,6 @@ namespace Automation
                     }
                 }
             }
-        }
-
-        void Update()
-        {
-            fps.text = (1.0f / Time.deltaTime).ToString();
         }
 
         public enum ToolMode
