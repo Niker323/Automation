@@ -12,18 +12,23 @@ namespace Automation
         public static Label money;
         public static Label fps;
         public ToolMode toolMode;
-        Button buildB, breakB, rotationB, cancelB, buildSelectB;
-        VisualElement root;
-        VisualElement midPanel;
-        Vector3 downPos;
-        Camera mainCamera;
+        static Button buildB, breakB, rotationB, cancelB, buildSelectB;
+        static VisualElement root;
+        static VisualElement midPanel;
+        static Vector3 downPos;
+        static Camera mainCamera;
         private bool md;
         private float dist;
         private float screencoof;
+        private Block buildBlock;
 
-        void Start()
+        public void Init()
         {
             root = GetComponent<UIDocument>().rootVisualElement;
+
+            UpdateSafeArea(null);
+            root.Q("safeArea").RegisterCallback<GeometryChangedEvent>(UpdateSafeArea);
+
             money = root.Q<Label>("money");
             fps = root.Q<Label>("fps");
             var back = root.Q("back");
@@ -41,34 +46,130 @@ namespace Automation
             buildSelectB = root.Q<Button>("buildSelect");
             buildSelectB.clicked += () =>
             {
-                root.Q<ListView>("blockList").itemsSource = Blocks.blocks.Select((block) => block.code).ToList();
-                OpenMidPanel(root.Q("selectBuild"));
+                OpenMidPanel("selectBuild");
             };
-            root.Q<ListView>("blockList").itemsChosen += (obj) =>
+            ListView blocksL = root.Q<ListView>("blockList");
+            blocksL.makeItem = () =>
             {
-                //IEnumerator<object> enumerator = obj.GetEnumerator();
-                //enumerator.MoveNext();
-                //string schm = enumerator.Current.ToString();
+                VisualElement itemElem = new VisualElement();
+
+                Label name = new Label();
+                name.style.marginTop = 0;
+                itemElem.Add(name);
+
+                //Label wpath = new Label();
+                //wpath.style.color = Color.gray;
+                //wpath.style.marginTop = 0;
+                //itemElem.Add(wpath);
+
+                itemElem.userData = name;
+                return itemElem;
             };
-            root.Q<Button>("closeMid").clicked += CloseMidPanel;
+            blocksL.bindItem = (e, i) =>
+            {
+                var items = (Label)e.userData;
+                items.text = Blocks.buildBlockList[i].code;
+            };
+            blocksL.itemsSource = Blocks.buildBlockList;
+            blocksL.itemsChosen += (obj) =>
+            {
+                IEnumerator<object> enumerator = obj.GetEnumerator();
+                enumerator.MoveNext();
+                SetBuildBlock(enumerator.Current as Block);
+                CloseMidPanel();
+            };
+
+            ListView itemsL = root.Q<ListView>("itemList");
+            itemsL.makeItem = () =>
+            {
+                VisualElement itemElem = new VisualElement();
+
+                Label name = new Label();
+                name.style.marginTop = 0;
+                itemElem.Add(name);
+
+                //Label wpath = new Label();
+                //wpath.style.color = Color.gray;
+                //wpath.style.marginTop = 0;
+                //itemElem.Add(wpath);
+
+                itemElem.userData = name;
+                return itemElem;
+            };
+            itemsL.bindItem = (e, i) =>
+            {
+                var items = (Label)e.userData;
+                items.text = Items.items[i].code;
+            };
+            itemsL.itemsSource = Items.marketItems;
+            itemsL.itemsChosen += (obj) =>
+            {
+                IEnumerator<object> enumerator = obj.GetEnumerator();
+                enumerator.MoveNext();
+                Market.selected?.SetItem(enumerator.Current as Item);
+                CloseMidPanel();
+            };
+
+            root.Query<Button>("closeMid").ForEach((btn) => { btn.clicked += CloseMidPanel; });
             mainCamera = Camera.main;
             screencoof = (Screen.height / 1000f) * 12;
+            SetBuildBlock(Blocks.blocks[1]);
             //For PC
             Bootstrap.OnUpdate += OnUpdate;
         }
 
-        public void CloseMidPanel()
+        private void UpdateSafeArea(GeometryChangedEvent evt)
         {
-            midPanel.style.display = DisplayStyle.None;
+            try
+            {
+                VisualElement safeAreaVE = root.Q("safeArea");
+                Rect safeArea = Screen.safeArea;
+                Vector2 leftTop = RuntimePanelUtils.ScreenToPanel(safeAreaVE.panel, new Vector2(safeArea.xMin, Screen.height - safeArea.yMax));
+                Vector2 rightBottom = RuntimePanelUtils.ScreenToPanel(safeAreaVE.panel, new Vector2(Screen.width - safeArea.xMax, safeArea.yMin));
+                safeAreaVE.style.paddingLeft = leftTop.x;
+                safeAreaVE.style.paddingTop = leftTop.y;
+                safeAreaVE.style.paddingRight = rightBottom.x;
+                safeAreaVE.style.paddingBottom = rightBottom.y;
+            }
+            catch (Exception e)
+            {
+                VisualElement safeAreaVE = root.Q("safeArea");
+                safeAreaVE.style.paddingLeft = 0;
+                safeAreaVE.style.paddingTop = 0;
+                safeAreaVE.style.paddingRight = 0;
+                safeAreaVE.style.paddingBottom = 0;
+            }
+        }
+
+        private void SetBuildBlock(Block block)
+        {
+            buildBlock = block;
+            buildSelectB.iconImage = block.icon;
+        }
+
+        public static void CloseMidPanel()
+        {
+            var oldMid = midPanel;
+            midPanel.style.scale = new Scale(new Vector2(0.75f, 0.75f));
+            midPanel.style.opacity = 0;
+            midPanel.schedule.Execute(() => { oldMid.style.display = DisplayStyle.None; })
+                .ExecuteLater((long)(oldMid.resolvedStyle.transitionDuration.First().value * 1000));
             midPanel = null;
         }
 
-        void OpenMidPanel(VisualElement panel)
+        public static void OpenMidPanel(string name)
         {
+            VisualElement panel = root.Q(name);
             if (midPanel != null)
+            {
                 midPanel.style.display = DisplayStyle.None;
+                midPanel.style.scale = new Scale(new Vector2(0.75f, 0.75f));
+                midPanel.style.opacity = 0;
+            }
             midPanel = panel;
             midPanel.style.display = DisplayStyle.Flex;
+            midPanel.style.scale = new Scale(new Vector2(1, 1));
+            midPanel.style.opacity = 1;
         }
 
         public void SetToolMode(ToolMode toolMode)
@@ -206,23 +307,23 @@ namespace Automation
                         case ToolMode.Build:
                             if (be.block.id == 0)
                             {
-                                Bootstrap.instance.grid.SetBlock(be.pos, 1);
+                                Bootstrap.instance.grid.TryBuildBlock(be.pos, buildBlock);
                             }
                             break;
                         case ToolMode.Break:
                             if (be.block.id != 0)
                             {
-                                Bootstrap.instance.grid.SetBlock(be.pos, 0);
+                                Bootstrap.instance.grid.SellBlock(be.pos);
                             }
                             break;
                         case ToolMode.Rotate:
                             if (be is SidedBlockEntity sbe)
                             {
-                                sbe.side = sbe.side.GetCW();
-                                Bootstrap.instance.grid.RedrawBlock(sbe.pos);
+                                sbe.SetRotation(sbe.side.GetCW());
                             }
                             break;
                         case ToolMode.None:
+                            be.OnUse();
                             break;
                     }
                 }

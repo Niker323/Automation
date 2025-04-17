@@ -10,11 +10,15 @@ namespace Automation
         public static event Action OnUpdate;
         public static event Action OnLogicUpdate;
         public static event Action OnLateUpdate;
+        public static float time;
         public GameObject field;
         public Material gridMaterial;
-        public long money;
+        public long money { get; private set; }
         public Grid grid = new Grid();
-        double time;
+        public Items items;
+        public Blocks blocks;
+        public MainGUI mainGUI;
+        double dt;
 
         void Start()
         {
@@ -22,18 +26,30 @@ namespace Automation
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = -1;
             Lang.Init();
-            GetComponent<Blocks>().Init();
+            items.Init();
+            blocks.Init();
+            money = long.Parse(PlayerPrefs.GetString("moneyValue", "0"));
+            TechTree.Init();
             grid.Init("Grid1");
             grid.DrawGrid();
+            mainGUI.Init();
+        }
+
+        public void ChangeMoney(int change)
+        {
+            money += change;
         }
 
         void Update()
         {
-            time += Time.deltaTime;
-            if (time > tickTime)
+            dt += Time.deltaTime;
+            time = Time.time;
+            if (dt > tickTime)
             {
-                time = time % tickTime;
+                dt = dt % tickTime;
                 OnLogicUpdate?.Invoke();
+                PlayerPrefs.SetString("moneyValue", money.ToString());
+                MainGUI.money.text = money.ToString();
             }
             OnUpdate?.Invoke();
         }

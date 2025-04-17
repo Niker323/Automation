@@ -5,6 +5,7 @@ namespace Automation.BlockEntities
 {
     public class BlockEntity
     {
+        public Grid grid;
         public Vector2Int pos;
         public Block block;
 
@@ -13,7 +14,12 @@ namespace Automation.BlockEntities
 
         }
 
-        public virtual void OnUnloaded()
+        public virtual void DrawBlockEntity()
+        {
+
+        }
+
+        public virtual void OnRemoved()
         {
 
         }

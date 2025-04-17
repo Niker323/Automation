@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741674813}
   - component: {fileID: 1741674812}
+  - component: {fileID: 1741674815}
   - component: {fileID: 1741674814}
   m_Layer: 0
   m_Name: Bootstrap
@@ -288,7 +289,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   field: {fileID: 1945976893}
   gridMaterial: {fileID: 2100000, guid: bc135d2f6b03e0d42a9fb7bab9c77e8d, type: 2}
-  money: 0
+  items: {fileID: 1741674815}
+  blocks: {fileID: 1741674814}
+  mainGUI: {fileID: 1904936651}
 --- !u!4 &1741674813
 Transform:
   m_ObjectHideFlags: 0
@@ -320,6 +323,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a89f1b7dc499e04f842ce5714a28fb1, type: 2}
   - {fileID: 11400000, guid: 7da00e215456b1447951abcdae085f04, type: 2}
   - {fileID: 11400000, guid: 5133235c08bb1b547a27fd1b68f2fb22, type: 2}
+  - {fileID: 11400000, guid: 7903290ba6cfe6c488f13096bd5d3346, type: 2}
+--- !u!114 &1741674815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741674811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a3af46b47c7894aa6147d0beda6d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemIcon: {fileID: 6235325079160092252, guid: f02313492ffeecf4fbf6533177ff940d, type: 3}
+  _items:
+  - {fileID: 11400000, guid: 789c70b387cc64241b307a046b685c59, type: 2}
 --- !u!1 &1904936647
 GameObject:
   m_ObjectHideFlags: 0

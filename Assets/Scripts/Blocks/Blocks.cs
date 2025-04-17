@@ -10,6 +10,7 @@ namespace Automation
     {
         public static Block[] blocks;
         public static Texture2D blockAtlas;
+        public static List<Block> buildBlockList = new List<Block>();
         public Block[] _blocks;
         bool inited = false;
 
@@ -45,6 +46,11 @@ namespace Automation
 
             Shader.SetGlobalVector("_AtlasSize", new Vector2(blockAtlas.width / 32, blockAtlas.height / 32));
             Bootstrap.instance.gridMaterial.mainTexture = blockAtlas;
+
+            foreach (var block in blocks)
+            {
+                if (block.canBuild) buildBlockList.Add(block);
+            }
         }
     }
 }

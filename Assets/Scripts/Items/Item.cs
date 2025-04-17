@@ -8,6 +8,7 @@ namespace Automation
     {
         public int id;
         public string code;
-        public Texture icon;
+        public Sprite icon;
+        public bool inMarket = false;
     }
 }

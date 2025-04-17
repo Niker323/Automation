@@ -12,15 +12,15 @@ namespace Automation
     {
         public const int size = 20;
         public const float cellSize = 0.32f;
-        const int verts = size * size * 8;
+        const int verts = size * size * 4;
         public string name;
+        public GameObject gridGO;
+        public bool visual = false;
         BlockEntity[,] blocks = new BlockEntity[size, size];
-        GameObject gridGO;
-        Mesh gridMesh;
-        Vector3[] uvs;
+        Mesh downGridMesh, upGridMesh;
+        Vector3[] downUVs, upUVs;
         HashSet<Vector2Int> toredraw = new HashSet<Vector2Int>();
         static Vector3[] forblockuvs = new Vector3[8];
-        bool visual = false;
 
         public void Init(string gridName)
         {
@@ -39,6 +39,15 @@ namespace Automation
             }
         }
 
+
+        public BlockEntity GetBlockEntity(Vector2Int pos)
+        {
+            if (pos.x > 0 && pos.x < size && pos.y > 0 && pos.y < size)
+                return blocks[pos.x, pos.y];
+            else 
+                return null;
+        }
+
         public BlockEntity GetBlockEntity(Vector3 pos)
         {
             const float halfField = cellSize * (size / 2);
@@ -54,14 +63,30 @@ namespace Automation
             return null;
         }
 
+        public void TryBuildBlock(int x, int y, Block block)
+        {
+            SetBlock(x, y, block.id);
+        }
+
+        public void TryBuildBlock(Vector2Int pos, Block block) => TryBuildBlock(pos.x, pos.y, block);
+
+        public void SellBlock(int x, int y)
+        {
+            SetBlock(x, y, 0);
+        }
+
+        public void SellBlock(Vector2Int pos) => SellBlock(pos.x, pos.y);
+
         public void SetBlock(int x, int y, int id)
         {
             Block block = Blocks.blocks[id];
             BlockEntity blockEntity = Activator.CreateInstance(block.blockEntityType) as BlockEntity;
+            blockEntity.grid = this;
             blockEntity.block = block;
             blockEntity.pos = new Vector2Int(x, y);
-            blocks[x, y]?.OnUnloaded();
+            blocks[x, y]?.OnRemoved();
             blocks[x, y] = blockEntity;
+            PlayerPrefs.SetInt($"{name}_{x}_{y}", id);
             blockEntity.OnLoaded();
             RedrawBlock(x, y);
         }
@@ -77,55 +102,65 @@ namespace Automation
 
         public void DrawGrid()
         {
-            gridMesh = new Mesh();
-            gridMesh.MarkDynamic();
+            visual = true;
+            gridGO = new GameObject("Grid");
+            gridGO.transform.parent = Bootstrap.instance.field.transform;
             Vector3[] vertices = new Vector3[verts];
             int[] indices = new int[verts];
             for (int i = 0; i < indices.Length; i++)
                 indices[i] = i;
-            uvs = new Vector3[verts];
+            downUVs = new Vector3[verts];
+            upUVs = new Vector3[verts];
             for (int x = 0; x < size; x++)
             {
                 for (int y = 0; y < size; y++)
                 {
                     BlockEntity be = blocks[x, y];
 
+                    be.DrawBlockEntity();
+
                     float xPos = x * cellSize;
                     float yPos = y * cellSize;
-                    int ind1 = (x + y * size) * 4;
-                    int ind2 = ind1 + verts / 2;
-                    vertices[ind1] = new Vector3(xPos, yPos, 0);
-                    vertices[ind1 + 1] = new Vector3(xPos + cellSize, yPos, 0);
-                    vertices[ind1 + 2] = new Vector3(xPos + cellSize, yPos + cellSize, 0);
-                    vertices[ind1 + 3] = new Vector3(xPos, yPos + cellSize, 0);
-                    vertices[ind2] = new Vector3(xPos, yPos, -5);
-                    vertices[ind2 + 1] = new Vector3(xPos + cellSize, yPos, -5);
-                    vertices[ind2 + 2] = new Vector3(xPos + cellSize, yPos + cellSize, -5);
-                    vertices[ind2 + 3] = new Vector3(xPos, yPos + cellSize, -5);
+                    int ind = (x + y * size) * 4;
+                    vertices[ind] = new Vector3(xPos, yPos, 0);
+                    vertices[ind + 1] = new Vector3(xPos + cellSize, yPos, 0);
+                    vertices[ind + 2] = new Vector3(xPos + cellSize, yPos + cellSize, 0);
+                    vertices[ind + 3] = new Vector3(xPos, yPos + cellSize, 0);
 
                     be.GetBlockUVs(forblockuvs);
-                    uvs[ind1] = forblockuvs[0];
-                    uvs[ind1 + 1] = forblockuvs[1];
-                    uvs[ind1 + 2] = forblockuvs[2];
-                    uvs[ind1 + 3] = forblockuvs[3];
+                    downUVs[ind] = forblockuvs[0];
+                    downUVs[ind + 1] = forblockuvs[1];
+                    downUVs[ind + 2] = forblockuvs[2];
+                    downUVs[ind + 3] = forblockuvs[3];
 
-                    uvs[ind2] = forblockuvs[4];
-                    uvs[ind2 + 1] = forblockuvs[5];
-                    uvs[ind2 + 2] = forblockuvs[6];
-                    uvs[ind2 + 3] = forblockuvs[7];
+                    upUVs[ind] = forblockuvs[4];
+                    upUVs[ind + 1] = forblockuvs[5];
+                    upUVs[ind + 2] = forblockuvs[6];
+                    upUVs[ind + 3] = forblockuvs[7];
                 }
             }
-            gridMesh.vertices = vertices;
-            gridMesh.SetIndices(indices, MeshTopology.Quads, 0);
-            gridMesh.SetUVs(0, uvs);
-            gridMesh.RecalculateBounds();
-            gridGO = new GameObject("Grid");
-            gridGO.transform.parent = Bootstrap.instance.field.transform;
-            gridGO.transform.position = new Vector3(0, 0, -1) - gridMesh.bounds.center;
-            gridGO.AddComponent<MeshFilter>().mesh = gridMesh;
+            downGridMesh = new Mesh();
+            downGridMesh.MarkDynamic();
+            downGridMesh.vertices = vertices;
+            downGridMesh.SetIndices(indices, MeshTopology.Quads, 0);
+            downGridMesh.SetUVs(0, downUVs);
+            downGridMesh.RecalculateBounds();
+            gridGO.transform.position = new Vector3(0, 0, -1) - downGridMesh.bounds.center;
+            gridGO.AddComponent<MeshFilter>().mesh = downGridMesh;
             gridGO.AddComponent<MeshRenderer>().material = Bootstrap.instance.gridMaterial;
+
+            GameObject upgridGO = new GameObject("UpGrid");
+            upgridGO.transform.parent = gridGO.transform;
+            upGridMesh = new Mesh();
+            upGridMesh.MarkDynamic();
+            upGridMesh.vertices = vertices;
+            upGridMesh.SetIndices(indices, MeshTopology.Quads, 0);
+            upGridMesh.SetUVs(0, upUVs);
+            upGridMesh.RecalculateBounds();
+            upgridGO.transform.position = new Vector3(0, 0, -6) - upGridMesh.bounds.center;
+            upgridGO.AddComponent<MeshFilter>().mesh = upGridMesh;
+            upgridGO.AddComponent<MeshRenderer>().material = Bootstrap.instance.gridMaterial;
             Bootstrap.OnLateUpdate += OnLateUpdate;
-            visual = true;
         }
 
         public void OnLateUpdate()
@@ -136,27 +171,29 @@ namespace Automation
                 {
                     BlockEntity be = blocks[pos.x, pos.y];
                     be.GetBlockUVs(forblockuvs);
-                    int ind1 = (pos.x + pos.y * size) * 4;
-                    int ind2 = ind1 + verts / 2;
-                    uvs[ind1] = forblockuvs[0];
-                    uvs[ind1 + 1] = forblockuvs[1];
-                    uvs[ind1 + 2] = forblockuvs[2];
-                    uvs[ind1 + 3] = forblockuvs[3];
+                    int ind = (pos.x + pos.y * size) * 4;
+                    downUVs[ind] = forblockuvs[0];
+                    downUVs[ind + 1] = forblockuvs[1];
+                    downUVs[ind + 2] = forblockuvs[2];
+                    downUVs[ind + 3] = forblockuvs[3];
 
-                    uvs[ind2] = forblockuvs[4];
-                    uvs[ind2 + 1] = forblockuvs[5];
-                    uvs[ind2 + 2] = forblockuvs[6];
-                    uvs[ind2 + 3] = forblockuvs[7];
+                    upUVs[ind] = forblockuvs[4];
+                    upUVs[ind + 1] = forblockuvs[5];
+                    upUVs[ind + 2] = forblockuvs[6];
+                    upUVs[ind + 3] = forblockuvs[7];
                 }
-                gridMesh.SetUVs(0, uvs);
+                downGridMesh.SetUVs(0, downUVs);
+                upGridMesh.SetUVs(0, upUVs);
             }
         }
 
         public void UndrawGrid()
         {
             GameObject.Destroy(gridGO);
-            GameObject.Destroy(gridMesh);
-            uvs = null;
+            GameObject.Destroy(upGridMesh);
+            GameObject.Destroy(downGridMesh);
+            downUVs = null;
+            upUVs = null;
             Bootstrap.OnLateUpdate -= OnLateUpdate;
             visual = false;
         }

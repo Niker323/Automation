@@ -22,4 +22,4 @@ MonoBehaviour:
   upTexture: {fileID: 2800000, guid: 7ae02aca2f772314c8a84fca06528068, type: 3}
   upFrames: 1
   upFPS: 1
-  blockEntity: BlockEntity
+  blockEntity: Market
