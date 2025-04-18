@@ -40,23 +40,27 @@ namespace Automation.BlockEntities
             Vector2Int nextPos = pos + item.to.Normali;
             BlockEntity nextBE = grid.GetBlockEntity(nextPos);
             moveItems.Remove(item);
-            if (nextBE is BEWithItems bewi && bewi.CanInputItem(item.to.Opposite))
+            if (nextBE is BEWithItems bewi && bewi.CanInputItem(item.to.Opposite) && bewi.TryInsertItem(item, item.to.Opposite))
             {
-                item.pos = 0;
-                item.from = item.to.Opposite;
-                item.to = null;
-                bewi.moveItems.Add(item);
+
             }
             else
             {
                 //Drop item
-                if (item.sprite != null) Items.PoolSprite(item.sprite.gameObject);
+                if (item.sprite != null)
+                {
+                    Items.PoolSprite(item.sprite.gameObject);
+                }
             }
         }
 
-        public virtual void OnInsertItem(ItemEntity item)
+        public virtual bool TryInsertItem(ItemEntity item, Side2D from)
         {
-
+            item.pos = 0;
+            item.from = item.to.Opposite;
+            item.to = null;
+            moveItems.Add(item);
+            return true;
         }
 
         public abstract void OnItemHalfPath(ItemEntity item);

@@ -12,6 +12,7 @@ namespace Automation
         public static event Action OnLateUpdate;
         public static float time;
         public static long money { get; private set; }
+        public static long mps { get; private set; }
         public GameObject field;
         public Material gridMaterial;
         public Grid grid = new Grid();
@@ -19,6 +20,8 @@ namespace Automation
         public Blocks blocks;
         public MainGUI mainGUI;
         double dt;
+        int tick;
+        static long tempAdd;
 
         void Start()
         {
@@ -29,6 +32,7 @@ namespace Automation
             items.Init();
             blocks.Init();
             money = long.Parse(PlayerPrefs.GetString("moneyValue", "0"));
+            mps = long.Parse(PlayerPrefs.GetString("moneyPerSecond", "0"));
             TechTree.Init();
             grid.Init("Grid1", 20);
             grid.DrawGrid();
@@ -38,6 +42,10 @@ namespace Automation
         public static void ChangeMoney(long change)
         {
             money += change;
+            if (change > 0)
+            {
+                tempAdd += change;
+            }
         }
 
         public static void ChangeMoney(int change) => ChangeMoney(change);
@@ -50,8 +58,16 @@ namespace Automation
             {
                 dt = dt % tickTime;
                 OnLogicUpdate?.Invoke();
+                tick++;
                 PlayerPrefs.SetString("moneyValue", money.ToString());
-                MainGUI.money.text = money.ToString();
+                MainGUI.money.text = StringUtil.NumberFormat(money);
+                if (tick % 10 == 0)
+                {
+                    mps = (mps + tempAdd) / 2;
+                    tempAdd = 0;
+                    MainGUI.mps.text = StringUtil.NumberFormat(mps);
+                    PlayerPrefs.SetString("moneyValue", mps.ToString());
+                }
             }
             OnUpdate?.Invoke();
         }

@@ -10,6 +10,7 @@ namespace Automation
     public class MainGUI : MonoBehaviour
     {
         public static Label money;
+        public static Label mps;
         public static Label fps;
         public ToolMode toolMode;
         static Button buildB, breakB, rotationB, cancelB, buildSelectB;
@@ -31,6 +32,7 @@ namespace Automation
             root.Q("safeArea").RegisterCallback<GeometryChangedEvent>(UpdateSafeArea);
 
             money = root.Q<Label>("money");
+            mps = root.Q<Label>("mps");
             fps = root.Q<Label>("fps");
             var back = root.Q("back");
             back.RegisterCallback<PointerDownEvent>(OnFieldDown);

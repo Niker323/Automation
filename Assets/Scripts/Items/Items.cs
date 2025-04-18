@@ -40,9 +40,9 @@ namespace Automation
             else
             {
                 ret = GameObject.Instantiate(Items.itemIcon, grid.gridGO.transform);
-                ret.transform.localPosition = pos;
-                ret.transform.localScale = scale;
             }
+            ret.transform.localPosition = pos;
+            ret.transform.localScale = scale;
             return ret;
         }
 

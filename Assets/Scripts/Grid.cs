@@ -105,6 +105,11 @@ namespace Automation
 
         public void DrawGrid()
         {
+            if (visual)
+            {
+                Debug.LogError("visual is true");
+                return;
+            }
             visual = true;
             gridGO = new GameObject("Grid");
             gridGO.transform.parent = Bootstrap.instance.field.transform;
@@ -194,6 +199,12 @@ namespace Automation
 
         public void UndrawGrid()
         {
+            if (!visual)
+            {
+                Debug.LogError("visual is false");
+                return;
+            }
+            visual = false;
             GameObject.Destroy(gridGO);
             GameObject.Destroy(upGridMesh);
             GameObject.Destroy(downGridMesh);
@@ -201,7 +212,6 @@ namespace Automation
             downUVs = null;
             upUVs = null;
             Bootstrap.OnLateUpdate -= OnLateUpdate;
-            visual = false;
         }
     }
 }
