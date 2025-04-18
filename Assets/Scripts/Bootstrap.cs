@@ -14,6 +14,8 @@ namespace Automation
         public static long money { get; private set; }
         public static long mps { get; private set; }
         public GameObject field;
+        public GameObject gridField;
+        public GameObject techField;
         public Material gridMaterial;
         public Grid grid = new Grid();
         public Items items;
@@ -33,7 +35,7 @@ namespace Automation
             blocks.Init();
             money = long.Parse(PlayerPrefs.GetString("moneyValue", "0"));
             mps = long.Parse(PlayerPrefs.GetString("moneyPerSecond", "0"));
-            TechTree.Init();
+            //TechTree.Init();
             grid.Init("Grid1", 20);
             grid.DrawGrid();
             mainGUI.Init();

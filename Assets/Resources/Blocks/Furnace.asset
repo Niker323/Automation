@@ -22,4 +22,4 @@ MonoBehaviour:
   upTexture: {fileID: 2800000, guid: d399e90b71dcd7e4e8b11540d4770b8a, type: 3}
   upFrames: 1
   upFPS: 1
-  blockEntity: BlockEntity
+  blockEntity: Furnace

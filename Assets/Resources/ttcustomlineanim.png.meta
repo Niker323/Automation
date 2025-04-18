@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: f3407dc49a601b842aabd3f04039ba05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3218400402476374236
+    second: ttcustomlineanim_0
+  - first:
+      213: -3604048749251317690
+    second: ttcustomlineanim_1
+  - first:
+      213: 7160154384234228120
+    second: ttcustomlineanim_2
+  - first:
+      213: 3802905585626890394
+    second: ttcustomlineanim_3
+  - first:
+      213: 3767289674104813308
+    second: ttcustomlineanim_4
+  - first:
+      213: -5137724972724874666
+    second: ttcustomlineanim_5
+  - first:
+      213: -5677780574401625898
+    second: ttcustomlineanim_6
+  - first:
+      213: -413440909947392746
+    second: ttcustomlineanim_7
+  - first:
+      213: 3240534803288345511
+    second: ttcustomlineanim_8
+  - first:
+      213: -4759307262716092606
+    second: ttcustomlineanim_9
+  - first:
+      213: 3330986431399900785
+    second: ttcustomlineanim_10
+  - first:
+      213: -6563585186087192985
+    second: ttcustomlineanim_11
+  - first:
+      213: -2510229971887210763
+    second: ttcustomlineanim_12
+  - first:
+      213: -5692444164146894356
+    second: ttcustomlineanim_13
+  - first:
+      213: -1431540895215950292
+    second: ttcustomlineanim_14
+  - first:
+      213: -4239149401028178036
+    second: ttcustomlineanim_15
+  - first:
+      213: 7176508482658020877
+    second: ttcustomlineanim_16
+  - first:
+      213: -7657344840223376295
+    second: ttcustomlineanim_17
+  - first:
+      213: 839073536834880220
+    second: ttcustomlineanim_18
+  - first:
+      213: -9207999577257213983
+    second: ttcustomlineanim_19
+  - first:
+      213: 5088003601054219289
+    second: ttcustomlineanim_20
+  - first:
+      213: 1606153950499733524
+    second: ttcustomlineanim_21
+  - first:
+      213: 1276558337897510871
+    second: ttcustomlineanim_22
+  - first:
+      213: -1280784269581735789
+    second: ttcustomlineanim_23
+  - first:
+      213: -280963757040972728
+    second: ttcustomlineanim_24
+  - first:
+      213: -6596696401325176066
+    second: ttcustomlineanim_25
+  - first:
+      213: -6735990104275279665
+    second: ttcustomlineanim_26
+  - first:
+      213: -9064335509322678601
+    second: ttcustomlineanim_27
+  - first:
+      213: -7932116529241338482
+    second: ttcustomlineanim_28
+  - first:
+      213: 9080348918249534611
+    second: ttcustomlineanim_29
+  - first:
+      213: 7137306136637233688
+    second: ttcustomlineanim_30
+  - first:
+      213: -5938341516808567653
+    second: ttcustomlineanim_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ttcustomlineanim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f274fe9353206cc4ca6a237b3ad2ff31
+      internalID: 3218400402476374236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0497858435943fc439f46ee0d4fcaa64
+      internalID: -3604048749251317690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7850410d96dc0a540958d28b2f98d27a
+      internalID: 7160154384234228120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cb0e41bbc754a41a009331cc579bd1
+      internalID: 3802905585626890394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133440605b6dcba44840b50c9df51275
+      internalID: 3767289674104813308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac3af9ba4f6d2546a3def3b29150765
+      internalID: -5137724972724874666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32da848011b11354c8f94f2c3c0dcfb3
+      internalID: -5677780574401625898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4f4db3dbb9f7b4d9d9b91acf3e6f74
+      internalID: -413440909947392746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c042f7a96a4d4734eaf06f066606e0f0
+      internalID: 3240534803288345511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025a4c1909346ee4a895e7be186fda7e
+      internalID: -4759307262716092606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a98617735247e04bb62ec4baa9ee31a
+      internalID: 3330986431399900785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_11
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5f57a3a8cfbfa48bc552c52c03b1f6
+      internalID: -6563585186087192985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_12
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a883be3c7b8032e44aeeab24ae7de40e
+      internalID: -2510229971887210763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00293e30bba79564c97bda0cb542e8c0
+      internalID: -5692444164146894356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67893d601687e8c40851cdcea73c230b
+      internalID: -1431540895215950292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191a0ac49cce5f54fadf5c5d6218f3f8
+      internalID: -4239149401028178036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329ec4d30e5ddc44ea93dba839a7f359
+      internalID: 7176508482658020877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316da4b0c63011a449552cb20efa5fcd
+      internalID: -7657344840223376295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a142f9385d48c54b9ebfb5c4a9dc603
+      internalID: 839073536834880220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_19
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b62172395b42340b78af961a2d83c8
+      internalID: -9207999577257213983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbde57e7edc06f4ebacd3942ece8515
+      internalID: 5088003601054219289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c790cc29d2506264e89d03beb8aaf25f
+      internalID: 1606153950499733524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949f70113853a1e4a8443d4bb17aa125
+      internalID: 1276558337897510871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_23
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a81d07a68494b4883aaba5c1b47451
+      internalID: -1280784269581735789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_24
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9fda143cbbe48499e45785bba49a8a
+      internalID: -280963757040972728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_25
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfdd80c116433f448154d0bc218c114
+      internalID: -6596696401325176066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_26
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492b4fe230c214947b95d6a492be0d0a
+      internalID: -6735990104275279665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347be6f16b9941d43bfffbc58f5326a6
+      internalID: -9064335509322678601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89547123112eb042aab15f4591ca734
+      internalID: -7932116529241338482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_29
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e236260ee8791794181d0566c58c3228
+      internalID: 9080348918249534611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47cb378c8208aa448d47687ebf860eb
+      internalID: 7137306136637233688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ttcustomlineanim_31
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb89ad926ff4d284b8e38d3b773a3c15
+      internalID: -5938341516808567653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ttcustomlineanim_0: 3218400402476374236
+      ttcustomlineanim_1: -3604048749251317690
+      ttcustomlineanim_10: 3330986431399900785
+      ttcustomlineanim_11: -6563585186087192985
+      ttcustomlineanim_12: -2510229971887210763
+      ttcustomlineanim_13: -5692444164146894356
+      ttcustomlineanim_14: -1431540895215950292
+      ttcustomlineanim_15: -4239149401028178036
+      ttcustomlineanim_16: 7176508482658020877
+      ttcustomlineanim_17: -7657344840223376295
+      ttcustomlineanim_18: 839073536834880220
+      ttcustomlineanim_19: -9207999577257213983
+      ttcustomlineanim_2: 7160154384234228120
+      ttcustomlineanim_20: 5088003601054219289
+      ttcustomlineanim_21: 1606153950499733524
+      ttcustomlineanim_22: 1276558337897510871
+      ttcustomlineanim_23: -1280784269581735789
+      ttcustomlineanim_24: -280963757040972728
+      ttcustomlineanim_25: -6596696401325176066
+      ttcustomlineanim_26: -6735990104275279665
+      ttcustomlineanim_27: -9064335509322678601
+      ttcustomlineanim_28: -7932116529241338482
+      ttcustomlineanim_29: 9080348918249534611
+      ttcustomlineanim_3: 3802905585626890394
+      ttcustomlineanim_30: 7137306136637233688
+      ttcustomlineanim_31: -5938341516808567653
+      ttcustomlineanim_4: 3767289674104813308
+      ttcustomlineanim_5: -5137724972724874666
+      ttcustomlineanim_6: -5677780574401625898
+      ttcustomlineanim_7: -413440909947392746
+      ttcustomlineanim_8: 3240534803288345511
+      ttcustomlineanim_9: -4759307262716092606
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
