@@ -107,7 +107,7 @@ namespace Automation
         {
             if (visual)
             {
-                Debug.LogError("visual is true");
+                Debug.LogWarning("visual is true");
                 return;
             }
             visual = true;
@@ -201,7 +201,7 @@ namespace Automation
         {
             if (!visual)
             {
-                Debug.LogError("visual is false");
+                Debug.LogWarning("visual is false");
                 return;
             }
             visual = false;

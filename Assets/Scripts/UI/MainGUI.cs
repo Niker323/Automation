@@ -22,6 +22,7 @@ namespace Automation
         private float dist;
         private float screencoof;
         private Block buildBlock;
+        private Vector3 tempCamPos;
         const float camBorderCoof = 5;
 
         public void Init()
@@ -116,12 +117,35 @@ namespace Automation
 
             root.Query<Button>("closeMid").ForEach((btn) => { btn.clicked += CloseMidPanel; });
             mainCamera = Camera.main;
+            tempCamPos = mainCamera.transform.position;
             screencoof = (Screen.height / 1000f) * 10;
             SetBuildBlock(Blocks.blocks[1]);
+            root.Q<Button>("techTree").clicked += OpenTechTree;
+            root.Q<Button>("closeTechTree").clicked += CloseTechTree;
             //For PC
             Bootstrap.OnUpdate += OnUpdate;
             root.Q<Button>("hide").clicked += () => { Bootstrap.instance.grid.UndrawGrid(); };
             root.Q<Button>("show").clicked += () => { Bootstrap.instance.grid.DrawGrid(); };
+        }
+
+        void OpenTechTree()
+        {
+            Vector3 temp = mainCamera.transform.position;
+            mainCamera.transform.position = tempCamPos;
+            tempCamPos = temp;
+            Bootstrap.instance.field = Bootstrap.instance.techField;
+            Bootstrap.instance.techField.SetActive(true);
+            Bootstrap.instance.grid.UndrawGrid();
+        }
+
+        void CloseTechTree()
+        {
+            Vector3 temp = mainCamera.transform.position;
+            mainCamera.transform.position = tempCamPos;
+            tempCamPos = temp;
+            Bootstrap.instance.field = Bootstrap.instance.gridField;
+            Bootstrap.instance.techField.SetActive(false);
+            Bootstrap.instance.grid.DrawGrid();
         }
 
         private void UpdateSafeArea(GeometryChangedEvent evt)

@@ -1,48 +1,69 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class TTLine : MonoBehaviour
+namespace Automation
 {
-    public TTNode ttpanelcomp;
-    public Sprite[] sprites;
-    private SpriteRenderer thisspriter;
-    private Sprite defaultsprites;
-
-    void Start()
+    public class TTLine : MonoBehaviour
     {
-        thisspriter = GetComponent<SpriteRenderer>();
-        defaultsprites = thisspriter.sprite;
-    }
+        public string spritespath;
+        public TTNode[] ttpanelcomp;
+        private SpriteRenderer thisspriter;
+        private Sprite defaultsprites;
+        private Sprite[] sprites;
+        private int maxtstate;
 
-    void FixedUpdate()
-    {
-        if (ttpanelcomp.state == TechTree.NodeState.Locked)
+        void Start()
         {
-            if (thisspriter.color != new Color(0, 0, 0, 1))
+            sprites = Resources.LoadAll<Sprite>(spritespath);
+            thisspriter = GetComponent<SpriteRenderer>();
+            defaultsprites = thisspriter.sprite;
+            foreach (var node in ttpanelcomp)
             {
-                thisspriter.color = new Color(0, 0, 0, 1);
+                node.OnStateChange += UpdateStates;
+            }
+            UpdateStates();
+        }
+
+        void UpdateStates()
+        {
+            int locmaxtstate = 0;
+            foreach (var node in ttpanelcomp)
+            {
+                if (locmaxtstate < (int)node.state)
+                {
+                    locmaxtstate = (int)node.state;
+                }
+            }
+            if (locmaxtstate != maxtstate)
+            {
+                if (maxtstate == 1)
+                {
+                    TechTree.OnUpdate -= OnUpdate;
+                }
+                maxtstate = locmaxtstate;
+                if (maxtstate == 0)
+                {
+                    thisspriter.color = new Color(0, 0, 0, 1);
+                }
+                else if (maxtstate == 1)
+                {
+                    thisspriter.color = new Color(1, 1, 1, 1);
+                    TechTree.OnUpdate += OnUpdate;
+                }
+                else if (maxtstate == 2)
+                {
+                    thisspriter.color = new Color(1, 1, 1, 1);
+                    thisspriter.sprite = defaultsprites;
+                }
             }
         }
-        else if (ttpanelcomp.state == TechTree.NodeState.CanResearch)
+
+        void OnUpdate()
         {
-            if (thisspriter.color != new Color(1, 1, 1, 1))
-            {
-                thisspriter.color = new Color(1, 1, 1, 1);
-            }
             int sprnum = (int)((Time.time % 1) / 0.03125f % sprites.Length);
             thisspriter.sprite = sprites[sprnum];
-        }
-        else if (ttpanelcomp.state == TechTree.NodeState.Researched)
-        {
-            if (thisspriter.color != new Color(1, 1, 1, 1))
-            {
-                thisspriter.color = new Color(1, 1, 1, 1);
-            }
-            if (thisspriter.sprite != defaultsprites)
-            {
-                thisspriter.sprite = defaultsprites;
-            }
         }
     }
 }
