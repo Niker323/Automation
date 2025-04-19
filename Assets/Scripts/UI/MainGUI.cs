@@ -325,7 +325,7 @@ namespace Automation
         private void OnFieldUp(PointerUpEvent evt)
         {
             Vector3 mpos = evt.position;
-            if (Vector3.Distance(mpos, downPos) < 10)
+            if (Bootstrap.instance.grid.visual && Vector3.Distance(mpos, downPos) < 10)
             {
                 mpos.y = Screen.height - mpos.y;
                 Vector3 wpos = Camera.main.ScreenToWorldPoint(mpos);

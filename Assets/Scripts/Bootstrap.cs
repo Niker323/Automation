@@ -20,6 +20,7 @@ namespace Automation
         public Grid grid = new Grid();
         public Items items;
         public Blocks blocks;
+        public Recipes recipes;
         public MainGUI mainGUI;
         double dt;
         int tick;
@@ -35,10 +36,12 @@ namespace Automation
             blocks.Init();
             money = long.Parse(PlayerPrefs.GetString("moneyValue", "0"));
             mps = long.Parse(PlayerPrefs.GetString("moneyPerSecond", "0"));
-            //TechTree.Init();
-            grid.Init("Grid1", 20);
+            TechTree.Init();
+            recipes.Init();
+            grid.Init("Grid1", 10);
             grid.DrawGrid();
             mainGUI.Init();
+            techField.SetActive(false);
         }
 
         public static void ChangeMoney(long change)

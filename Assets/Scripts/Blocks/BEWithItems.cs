@@ -16,7 +16,7 @@ namespace Automation.BlockEntities
             if (grid.visual) Bootstrap.OnUpdate += OnUpdate;
         }
 
-        private void OnLogicUpdate()
+        protected virtual void OnLogicUpdate()
         {
             for (int i = moveItems.Count - 1; i >= 0; i--)
             {
@@ -30,7 +30,7 @@ namespace Automation.BlockEntities
                 }
                 else if (ie.pos >= 10)
                 {
-                    TryMoveItemToNextPos(ie);//fix
+                    TryMoveItemToNextPos(ie);
                 }
             }
         }
@@ -46,18 +46,14 @@ namespace Automation.BlockEntities
             }
             else
             {
-                //Drop item
-                if (item.sprite != null)
-                {
-                    Items.PoolSprite(item.sprite.gameObject);
-                }
+                item.Drop();
             }
         }
 
         public virtual bool TryInsertItem(ItemEntity item, Side2D from)
         {
             item.pos = 0;
-            item.from = item.to.Opposite;
+            item.from = from;
             item.to = null;
             moveItems.Add(item);
             return true;
@@ -78,15 +74,22 @@ namespace Automation.BlockEntities
                 for (int i = 0; i < moveItems.Count; i++)
                 {
                     ItemEntity ie = moveItems[i];
-                    Vector2 locpos = ie.randomOffset;
+                    float dt = Bootstrap.time - ie.lastLogicTime;
+                    Vector2 locpos;
+                    float lpos = ie.pos / 10f + dt;
                     if (ie.pos > 4)
                     {
-                        locpos += ((ie.pos - 5) / 10f + (Bootstrap.time - ie.lastLogicTime)) * Grid.cellSize * ie.to.Normal;
+                        locpos = (lpos - 0.5f) * Grid.cellSize * ie.to.Normal;
                     }
                     else
                     {
-                        locpos += ((5 - ie.pos) / 10f - (Bootstrap.time - ie.lastLogicTime)) * Grid.cellSize * ie.from.Normal;
+                        locpos = (0.5f - lpos) * Grid.cellSize * ie.from.Normal;
                     }
+                    if (ie.randomOffsetInterp != ie.randomOffset)
+                    {
+                        ie.randomOffsetInterp = Vector2.Lerp(ie.randomOffsetInterp, ie.randomOffset, lpos * 2);
+                    }
+                    locpos += ie.randomOffsetInterp;
                     if (ie.sprite == null)
                     {
                         ie.sprite = Items.CreateItemSprite(grid, new Vector3(0, 0, -3), new Vector3(0.5f, 0.5f, 1)).transform;

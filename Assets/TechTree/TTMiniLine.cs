@@ -9,9 +9,9 @@ namespace Automation
     {
         public TTNode[] ttpanelcomp;
         public Sprite[] sprites;
-        private int maxtstate = 0;
         private SpriteRenderer thisspriter;
         private Sprite defaultsprites;
+        private int maxtstate;
 
         void Start()
         {

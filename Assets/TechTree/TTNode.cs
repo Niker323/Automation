@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Automation
 {
+    [SelectionBase]
     public class TTNode : MonoBehaviour
     {
         public TechTree.NodeState state = TechTree.NodeState.Locked;
@@ -16,31 +17,49 @@ namespace Automation
         private GameObject offsprite;
         private SpriteRenderer offspriter;
 
+        private void Awake()
+        {
+            if (state == TechTree.NodeState.CanResearch) state = TechTree.NodeState.Locked;
+            TechTree.nodes.Add(name, this);
+        }
+
         void Start()
         {
             spriter = GetComponent<SpriteRenderer>();
             offsprite = transform.Find("Off").gameObject;
             offspriter = offsprite.GetComponent<SpriteRenderer>();
             TechUpdate();
+            UpdateNeeds();
+            foreach (var node in needNodes)
+                node.OnStateChange += UpdateNeeds;
         }
 
         void OnUpdate()
         {
-            if (state == TechTree.NodeState.CanResearch)
+            float ost = Time.time % 1;
+            if (ost > 0.5f)
             {
-                float ost = Time.time % 1;
-                if (ost > 0.5f)
-                {
-                    offspriter.color = new Color(1, 1, 1, 1.2f - Time.time % 1);
-                }
-                else
-                {
-                    offspriter.color = new Color(1, 1, 1, 0.2f + Time.time % 1);
-                }
+                offspriter.color = new Color(1, 1, 1, 1.2f - Time.time % 1);
+            }
+            else
+            {
+                offspriter.color = new Color(1, 1, 1, 0.2f + Time.time % 1);
             }
         }
 
-        public void TechUpdate()
+        public void SetState(TechTree.NodeState state)
+        {
+            if (this.state != state)
+            {
+                if (this.state == TechTree.NodeState.CanResearch) Bootstrap.OnUpdate -= OnUpdate;
+                this.state = state;
+                if (this.state == TechTree.NodeState.CanResearch) Bootstrap.OnUpdate += OnUpdate;
+                OnStateChange?.Invoke();
+                TechUpdate();
+            }
+        }
+
+        private void UpdateNeeds()
         {
             if (state != TechTree.NodeState.Researched)
             {
@@ -55,10 +74,13 @@ namespace Automation
                 }
                 if (can)
                 {
-                    state = TechTree.NodeState.CanResearch;
-                    OnStateChange?.Invoke();
+                    SetState(TechTree.NodeState.CanResearch);
                 }
             }
+        }
+
+        private void TechUpdate()
+        {
             if (state == TechTree.NodeState.Locked)
             {
                 offsprite.SetActive(true);
@@ -67,13 +89,8 @@ namespace Automation
             else if (state == TechTree.NodeState.CanResearch)
             {
                 offsprite.SetActive(true);
-                Bootstrap.OnUpdate += OnUpdate;
             }
             else if (state == TechTree.NodeState.Researched)
-            {
-                offsprite.SetActive(false);
-            }
-            else
             {
                 offsprite.SetActive(false);
             }
@@ -87,9 +104,9 @@ namespace Automation
 
         void OnMouseUp()
         {
-            if (Mathf.Abs(vec.x - Input.mousePosition.x) <= Screen.height / 400f && Mathf.Abs(vec.y - Input.mousePosition.y) <= Screen.height / 400f)
+            if (Mathf.Abs(vec.x - Input.mousePosition.x) <= Screen.height / 200f && Mathf.Abs(vec.y - Input.mousePosition.y) <= Screen.height / 200f && vec.y > Screen.height / 12f)
             {
-                TechTree.instance.SelectTech(this);
+                TechTree.SelectTech(this);
             }
         }
     }

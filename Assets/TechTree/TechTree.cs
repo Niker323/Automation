@@ -10,24 +10,15 @@ namespace Automation
     {
         public static TechTree instance;
         public static event Action OnUpdate;
+        public static Dictionary<string, TTNode> nodes = new Dictionary<string, TTNode>();
+        public static TTNode selectedtech;
+        public static event Action<string> OnResearchTech;
         public Sprite defsprite;
         public Sprite selsprite;
-        public TTNode[] ttpanels;
-        public TTNode selectedtech;
 
         private void Awake()
         {
             instance = this;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            //for (int i = 0; i < ttarr.Length; i++)
-            //{
-            //    ttarr[i] = PlayerPrefs.GetInt("tech_tree_" + i, ttarr[i]);
-            //}
-            //UpdateTree();
         }
 
         void Update()
@@ -35,44 +26,31 @@ namespace Automation
             OnUpdate?.Invoke();
         }
 
-        //public void UpdateTree()
-        //{
-        //    foreach (TTNode panel in ttpanels)
-        //    {
-        //        if (ttarr[panel.ttid] == 0)
-        //        {
-        //            locres = true;
-        //            foreach (TTNode needpanel in panel.needNodes)
-        //            {
-        //                if (needpanel.state != NodeState.Researched)
-        //                {
-        //                    locres = false;
-        //                }
-        //            }
-        //            if (locres)
-        //            {
-        //                ttarr[panel.ttid] = 1;
-        //            }
-        //        }
-        //        panel.TechUpdate();
-        //    }
-        //}
+        public static void Init()
+        {
 
-        public void SelectTech(TTNode node)
+        }
+
+        public static void SelectTech(TTNode node)
         {
             if (node.state != NodeState.Locked)
             {
-                if (selectedtech != null) selectedtech.spriter.sprite = defsprite;
+                if (selectedtech != null)
+                {
+                    if (selectedtech == node) Upgrade();
+                    else selectedtech.spriter.sprite = instance.defsprite;
+                }
                 selectedtech = node;
-                selectedtech.spriter.sprite = selsprite;
+                selectedtech.spriter.sprite = instance.selsprite;
             }
         }
 
-        public void Upgrade()
+        public static void Upgrade()
         {
             if (selectedtech.state == NodeState.CanResearch)
             {
-                selectedtech.state = NodeState.Researched;
+                selectedtech.SetState(NodeState.Researched);
+                OnResearchTech?.Invoke(selectedtech.name);
             }
         }
 

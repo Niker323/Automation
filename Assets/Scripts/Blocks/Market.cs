@@ -24,7 +24,6 @@ namespace Automation.BlockEntities
             itemSaveKey = $"_{grid.name}_{pos.x}_{pos.y}_item";
             int itemid = PlayerPrefs.GetInt(itemSaveKey, -1);
             if (itemid != -1) buyItem = Items.items[itemid];
-            Bootstrap.OnLogicUpdate += OnLogicUpdate;
         }
 
         public override void DrawBlockEntity()
@@ -50,8 +49,9 @@ namespace Automation.BlockEntities
             itemIcon.gameObject.transform.localPosition = new Vector3(locpos.x + pos.x * Grid.cellSize, locpos.y + pos.y * Grid.cellSize, -6);
         }
 
-        private void OnLogicUpdate()
+        protected override void OnLogicUpdate()
         {
+            base.OnLogicUpdate();
             if (buyItem != null)
             {
                 timer++;
